@@ -24,34 +24,45 @@ namespace WSR2017
             Controls.Add(button);
         }
 
+        public void NewTextBox(int x, int y, int width, int height, string name, EventHandler eventname)
+        {
+            TextBox textbox = new TextBox();
+            textbox.Location = new Point(x, y);
+            textbox.Name = name;
+            textbox.Size = new Size(width, height);
+            textbox.TabStop = false;
+            textbox.TextChanged += eventname;
+            Controls.Add(textbox);
+        }
+
         public Login()
         {
             InitializeComponent();
             MinimumSize = new Size(config.MinHeight, config.MaxWidth);
-            MaximumSize = new Size(config.MaxHeight, config.MaxWidth);
-            NewBotton(Width/2+25, Height/2+100 / 2, 100, 25,"button1","Я кнопка!", button1_Click);
-            NewBotton(Width / 2-20, Height / 2-50, 100, 25, "button2", "Я 2 кнопка!", button2_Click);
-            
+            MaximumSize = new Size(config.MaxHeight, config.MaxWidth);          
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-            NewBotton(Width / 2, Height / 2, 100, 25, "button3", "Я 3 кнопка!", button3_Click);
+            NewBotton(Width / 2 + 25, Height / 2 + 100 / 2, 100, 25, "button1", "Войти", button1_Click);
+            NewTextBox(100, 150, 200, 150, "textbox2", textBox1_TextChanged);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Я кнопка");
+            if(Controls["textbox2"].Text == "ТЕКСТ")
+            {
+                MessageBox.Show("заза");
+            }
+            else
+            {
+                MessageBox.Show("Сам ты " + Controls["textbox2"].Text);
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Я 2 кнопка");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Я 3 кнопка");
+            
         }
     }
 }
