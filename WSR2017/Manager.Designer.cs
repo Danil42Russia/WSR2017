@@ -1,8 +1,9 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace WSR2017
 {
-    partial class Login
+    partial class Manager
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +30,12 @@ namespace WSR2017
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        { 
-            this.SuspendLayout();
-            // 
-            // Login
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+        {
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "Login";
-            this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
+            this.Name = "Manager";
+            this.Text = "Manager";
+            this.Load += new EventHandler(this.Manager_Load);
             this.ResumeLayout(false);
             this.FormClosing += new FormClosingEventHandler(procedure.Form_Exit);
         }
