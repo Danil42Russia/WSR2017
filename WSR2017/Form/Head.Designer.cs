@@ -3,12 +3,17 @@ using System.Windows.Forms;
 
 namespace WSR2017
 {
-    partial class Manager
+    partial class Head
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
+        public void Form_Exit(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         /// <summary>
         /// Clean up any resources being used.
@@ -33,11 +38,11 @@ namespace WSR2017
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "Manager";
-            this.Text = "Manager";
+            this.Name = "Экран директора";
+            this.Text = "Экран директора";
             this.Load += new EventHandler(this.Manager_Load);
             this.ResumeLayout(false);
-            this.FormClosing += new FormClosingEventHandler(procedure.Form_Exit);
+            this.FormClosing += new FormClosingEventHandler(Form_Exit);
         }
 
         #endregion

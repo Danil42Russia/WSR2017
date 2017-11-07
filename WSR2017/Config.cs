@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace WSR2017
+﻿namespace WSR2017
 {
     /// <summary>
     /// Конфиг файл для проекта

@@ -61,34 +61,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
-    <Compile Include="Form\Customer.cs">
+    <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Customer.Designer.cs">
+    <Compile Include="Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Head.cs">
+    <Compile Include="Head.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Head.Designer.cs">
+    <Compile Include="Head.Designer.cs">
       <DependentUpon>Head.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Storekeeper.cs">
+    <Compile Include="Storekeeper.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Storekeeper.Designer.cs">
+    <Compile Include="Storekeeper.Designer.cs">
       <DependentUpon>Storekeeper.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Manager.cs">
+    <Compile Include="Manager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Manager.Designer.cs">
+    <Compile Include="Manager.Designer.cs">
       <DependentUpon>Manager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Login.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Login.Designer.cs">
+    <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="NewElements.cs">

@@ -8,7 +8,7 @@ namespace WSR2017
     {
         private Config config = new Config();
         private NewElements elements = new NewElements();
-        private Procedure procedure = new Procedure();
+        private UserLogins user = new UserLogins();
 
         public Manager()
         {
@@ -19,11 +19,18 @@ namespace WSR2017
 
         private void Manager_Load(object sender, EventArgs e)
         {
-            Label password_lebel = elements.NewLabel(Width / 2 - 111, Width / 2 - 20, 100, 20, "password_lebel", "Пароль: ", 11);
-            Controls.Add(password_lebel);
+            Button exit = elements.NewBotton(385, 0, 100, 25, "exit_botton", "Выйти", ExitBut_Click);
+            Controls.Add(exit);
         }
 
-
-
+        private void ExitBut_Click(object sender, EventArgs e)
+        {
+            user.Login = "";
+            user.Password = "";
+            user.Role = 0;
+            Form form_login = new Login();
+            form_login.Show();
+            Hide();
+        }
     }
 }
